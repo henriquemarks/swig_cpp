@@ -1,6 +1,6 @@
 /* File : example.cpp */
 
-double  My_variable  = 3.0;
+double  My_variable  = 7.0;
 
 /* Compute factorial of n */
 int  fact(int n) {
