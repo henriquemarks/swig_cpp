@@ -1,4 +1,6 @@
 # This is a CMake example for Python
+CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+PROJECT(swig_cpp)
 
 FIND_PACKAGE(SWIG REQUIRED)
 INCLUDE(${SWIG_USE_FILE})
@@ -12,5 +14,5 @@ SET(CMAKE_SWIG_FLAGS "")
 
 SET_SOURCE_FILES_PROPERTIES(example.i PROPERTIES CPLUSPLUS ON)
 SET_SOURCE_FILES_PROPERTIES(example.i PROPERTIES SWIG_FLAGS "-includeall")
-SWIG_ADD_MODULE(example python example.i example.cpp)
+SWIG_ADD_LIBRARY(example python example.i example.cpp)
 SWIG_LINK_LIBRARIES(example ${PYTHON_LIBRARIES})
